@@ -41,7 +41,7 @@ export function ViewUsers() {
     return (
         <>
             <div className="p-1 pt-4">
-                <Checkbox className="mr-1" id="verificationRequested" checked={searchData?.verificationRequested} onClick={() => { setSearchData({ ...searchData, verificationRequested: !searchData?.verificationRequested ?? true }) }} />
+                <Checkbox className="mr-1" id="verificationRequested" checked={searchData?.verificationRequested} onClick={() => { setSearchData({ ...searchData, verificationRequested: !searchData?.verificationRequested }) }} />
                 <Label htmlFor="verificationRequested">Verification requests only</Label>
             </div>
             <div className="p-1 pt-4">

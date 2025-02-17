@@ -39,9 +39,8 @@ export default function AuthCard() {
             </CardHeader>
             <CardContent >
                 {sessionData && <Link href="/profile" ><Button variant="default" className="m-1 mr-4">Profile</Button></Link>}
-                <Button variant={sessionData ? "destructive" : "default"} className="m-1 mr-4" onClick={sessionData ? () => void signOut() : () => void signIn('google')}>{sessionData ? "Logout" : "Login"}</Button>
-                {!sessionData && <Button variant="default" className="m-1" onClick={() => void signIn('google')}>Sign Up</Button>}
-
+                <Button disabled variant={sessionData ? "destructive" : "default"} className="m-1 mr-4" onClick={sessionData ? () => void signOut() : () => void signIn('google')}>{sessionData ? "Logout" : "Login"}</Button>
+                {!sessionData && <Button disabled variant="default" className="m-1" onClick={() => void signIn('google')}>Sign Up</Button>}
             </CardContent>
         </Card >
     );

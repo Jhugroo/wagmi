@@ -6,7 +6,7 @@ import {
     InputOTPGroup,
     InputOTPSlot,
 } from "@/components/ui/input-otp"
-import { act, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import AutocompleteField from "../ui/custom/autocomplete"
 import { splitByLastSpace } from "@/lib/utils"
 export function ShowEnterpriseCharacteristics() {
@@ -14,7 +14,7 @@ export function ShowEnterpriseCharacteristics() {
     const [mainActivity, setMainActivity] = useState({ text: '', code: '' })
     const [secondaryActivities, setSecondaryActivities] = useState([] as { text: string, code: string }[])
     useEffect(() => {
-        setCharacteristics({ ...characteristics, mainActivity: mainActivity.text + " " + mainActivity.code ?? "" })
+        setCharacteristics({ ...characteristics, mainActivity: mainActivity.text + " " + mainActivity.code })
     }, [mainActivity])
     useEffect(() => {
         setCharacteristics({ ...characteristics, secondaryActivities: Object.values(secondaryActivities).map(({ text, code }) => (text.length > 0 || code.length > 0) && text + " " + code).filter((acts) => acts !== false) })

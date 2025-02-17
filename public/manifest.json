@@ -1,7 +1,7 @@
 {
-  "name": "CEA online Survey Application",
-  "short_name": "CEA online Survey Application",
-  "description": "Catering services",
+  "name": "We're all gonna make it",
+  "short_name": "We're all gonna make it",
+  "description": "Real nutrition and health",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -12,18 +12,18 @@
       "src": "home.png",
       "sizes": "1280x720",
       "platform": "wide",
-      "label": "CEA online Survey Application"
+      "label": "We're all gonna make it"
     },
     {
       "src": "home.png",
       "sizes": "1280x720",
       "platform": "wide",
-      "label": "CEA online Survey Application"
+      "label": "We're all gonna make it"
     },
     {
       "src": "home.png",
       "sizes": "600x400",
-      "label": "CEA online Survey Application"
+      "label": "We're all gonna make it"
     }
   ],
   "icons": [

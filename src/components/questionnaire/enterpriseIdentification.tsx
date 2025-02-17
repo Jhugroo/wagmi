@@ -17,7 +17,7 @@ export function ShowEnterpriseIdentification() {
     const [postalAddress, setPostalAddress] = useState('')
 
     useEffect(() => {
-        setIdentification({ ...identification, ['businessAddress']: address + " " + postalAddress ?? "" })
+        setIdentification({ ...identification, ['businessAddress']: address + " " + postalAddress })
     }, [address, postalAddress])
     useEffect(() => {
         const address = splitByLastSpace(identification.businessAddress)
