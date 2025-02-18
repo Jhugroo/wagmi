@@ -21,9 +21,15 @@ export function AfterHero() {
                 </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-                <AccordionTrigger>What caused all this nonsense</AccordionTrigger>
+                <AccordionTrigger>The rich dont want you to eat meat</AccordionTrigger>
                 <AccordionContent>
                     Learn about why the rich dont want you to eat meat
+                </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+                <AccordionTrigger>Generational malnutrition and profit</AccordionTrigger>
+                <AccordionContent>
+                    Learn about how generational manipulation and propaganda has turned health(or lack of) into a global scale money printing machine
                 </AccordionContent>
             </AccordionItem>
         </Accordion>
