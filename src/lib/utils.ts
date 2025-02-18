@@ -1,16 +1,16 @@
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 export function capitalizeFirstLetter(str: string) {
-  return (str.charAt(0).toUpperCase() + str.slice(1))
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 export function capitalizeFirstLetterEachWord(str: string) {
-  return (str.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase()));
+  return str.replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase());
 }
 
 export function limitStringCharacterCount(str: string, count = 80) {
@@ -19,13 +19,16 @@ export function limitStringCharacterCount(str: string, count = 80) {
 
 export function dateFormatter(date: string) {
   const d = new Date(date);
-  return d.getTime()
+  return d.getTime();
 }
 
-export function dateFormatterDisplay(dateString: string | Date, options: object = { day: '2-digit', month: 'short', year: 'numeric' }) {
+export function dateFormatterDisplay(
+  dateString: string | Date,
+  options: object = { day: '2-digit', month: 'short', year: 'numeric' },
+) {
   const date = new Date(dateString);
 
-  return date.toLocaleString('en-gb', options)
+  return date.toLocaleString('en-gb', options);
 }
 export function splitByLastSpace(str: string) {
   const lastSpaceIndex = str.lastIndexOf(' ');

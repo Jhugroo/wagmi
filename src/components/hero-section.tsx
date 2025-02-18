@@ -34,7 +34,7 @@ export function HeroSection() {
         <ShineBorder className="relative mx-auto" borderClassName="border border-white/10 rounded-xl overflow-hidden">
           <div className="relative">
             <Image
-              src="/207464.jpg"
+              src="/jumping.jpg"
               alt="Background Gradient"
               width={1920}
               height={1080}
@@ -55,7 +55,8 @@ export function HeroSection() {
                 </div>
                 <div className="flex-1 pl-2">
                   <Image
-                    src="/jumping.jpg"
+
+                    src="/207464.jpg"
                     alt="Code Editor"
                     width={800}
                     height={600}
