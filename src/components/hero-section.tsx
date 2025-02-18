@@ -15,10 +15,10 @@ export function HeroSection() {
       >
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            Healthy Living. Longevity. Happiness.
+            Healthy Living. Happiness. Longevity.
           </h1>
           <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-            Rooting out the lies and propaganda
+            Rooting out the lies and propaganda. Undoing generations of malnutrition.
           </p>
           <div className="flex gap-4 justify-center">
             <Button variant="outline" className="gap-2 border-white/10 bg-black/5 hover:bg-black/10">
