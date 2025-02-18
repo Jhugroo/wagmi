@@ -40,7 +40,7 @@ export function ShineBorder({ children, className = "", borderClassName = "", du
           style={{
             background: `radial-gradient(
               600px circle at var(--mouse-x) var(--mouse-y),
-              rgba(255,255,255,0.1),
+              rgba(163, 5, 255, 0.1),
               transparent 40%
             )`,
           }}

@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen pt-32 pb-16 overflow-hidden">
+    <section className="relative pt-32 pb-16 overflow-hidden">
       <InteractiveGrid containerClassName="absolute inset-0" className="opacity-30" points={40} />
 
       <ShineBorder
@@ -42,7 +42,7 @@ export function HeroSection() {
               priority
             />
             <div className="absolute inset-0 flex items-end justify-center pb-16">
-              <div className="bg-black/20 backdrop-blur-sm p-4 rounded-xl w-[90%] h-[70%] flex">
+              <div className="bg-black/20 backdrop-blur-sm p-2 rounded-xl w-[90%] h-[70%] flex">
                 <div className="flex-1 pr-2">
                   <Image
                     src="/Red-meat440-980233e.jpg"
@@ -55,7 +55,6 @@ export function HeroSection() {
                 </div>
                 <div className="flex-1 pl-2">
                   <Image
-
                     src="/207464.jpg"
                     alt="Code Editor"
                     width={800}
