@@ -22,6 +22,7 @@
 	initializeStores();
 </script>
 
+<title> Thrive(temporary name)</title>
 <Toast
 	transitions={true}
 	transitionIn={slide}
@@ -34,7 +35,9 @@
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">Thrive(Tentative)</strong>
+				<strong class="text-xl uppercase flex">Thrive</strong>(
+				<blockquote class="text-xl p">Temporary name</blockquote>
+				)
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<LightSwitch />
@@ -43,3 +46,9 @@
 	</svelte:fragment>
 	<slot />
 </AppShell>
+
+<style>
+	.p {
+		font-style: italic;
+	}
+</style>
