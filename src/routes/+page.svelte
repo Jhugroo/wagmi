@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
-	import { slide } from 'svelte/transition';
+	import { slide, fade } from 'svelte/transition';
 	import { getToastStore } from '@skeletonlabs/skeleton';
 	const accordionDatas = [
 		{
@@ -35,9 +35,10 @@
 	let selected: number = 0;
 </script>
 
-<Accordion autocollapse>
+<Accordion spacing="space-y-4  [&>div]:shadow-sm [&>div]:shadow-indigo-500/50" autocollapse>
 	{#each accordionDatas as { icon, summary, content, iconUncheck }, index}
 		<AccordionItem
+			shadows={true}
 			transitions={true}
 			transitionIn={slide}
 			transitionOut={slide}
@@ -55,21 +56,19 @@
 			<svelte:fragment slot="summary"><span class=" font-semibold">{summary}</span></svelte:fragment
 			>
 			<svelte:fragment slot="content">
-				<div class="flex">
-					<p class="pr-4">{content}</p>
-					<button
-						type="button"
-						class="btn btn-sm variant-filled"
-						on:click={() => {
-							toastStore.clear();
-							toastStore.trigger({ message: 'Coming soon!', timeout: 1500 });
-						}}
-					>
-						<span> Read</span>
-						<span><Icon icon="gravity-ui:circle-chevron-right" width="16" height="16" /></span>
-					</button>
-				</div></svelte:fragment
-			>
+				<p>{content}</p>
+				<button
+					type="button"
+					class="btn btn-sm variant-filled h-8"
+					on:click={() => {
+						toastStore.clear();
+						toastStore.trigger({ message: 'Coming soon!', timeout: 1500 });
+					}}
+				>
+					<span> Read</span>
+					<span><Icon icon="gravity-ui:circle-chevron-right" width="16" height="16" /></span>
+				</button>
+			</svelte:fragment>
 		</AccordionItem>
 	{/each}
 </Accordion>
