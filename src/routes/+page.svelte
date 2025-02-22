@@ -3,6 +3,8 @@
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 	import { slide, fade } from 'svelte/transition';
 	import { getToastStore } from '@skeletonlabs/skeleton';
+	import { popup } from '@skeletonlabs/skeleton';
+	import type { PopupSettings } from '@skeletonlabs/skeleton';
 	const accordionDatas = [
 		{
 			icon: 'gravity-ui:heart-fill',
@@ -33,6 +35,11 @@
 
 	const toastStore = getToastStore();
 	let selected: number = 0;
+	const popupFeatured: PopupSettings = {
+		event: 'click',
+		target: 'popupFeatured',
+		placement: 'bottom'
+	};
 </script>
 
 <Accordion spacing="space-y-4  [&>div]:shadow-sm [&>div]:shadow-indigo-500/50" autocollapse>
@@ -72,3 +79,14 @@
 		</AccordionItem>
 	{/each}
 </Accordion>
+
+<button class="btn variant-filled" transition:slide use:popup={popupFeatured}>psst....</button>
+<div class="card p-4 w-72 shadow-xl" data-popup="popupFeatured">
+	<div><p>Can I tell you a secret?</p></div>
+	<button class="btn variant-filled" use:popup={{ ...popupFeatured, target: 'awesome' }}
+		>yes?.</button
+	>
+</div>
+<div class="card p-4 w-72 shadow-xl" transition:slide data-popup="awesome">
+	<div><p>You're awesome <Icon icon="gravity-ui:heart-fill" /></p></div>
+</div>
